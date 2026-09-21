@@ -901,8 +901,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e232ee43e162227bac2f03b0747a22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Oscillator
+  _amplitude: 0.15
+  _frequency: 0.5
   _offset: 0
-  _frequency: 2
 --- !u!1 &952499763
 GameObject:
   m_ObjectHideFlags: 0
