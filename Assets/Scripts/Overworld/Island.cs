@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Island : MonoBehaviour
 {
-    [SerializeField] private Scene _sceneToLoad;
+    [SerializeField] private string _sceneToLoad;
 
-    public Scene GetIslandScene()
+    public string GetIslandScene()
     {
         return _sceneToLoad;
     }
