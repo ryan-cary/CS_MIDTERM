@@ -1,10 +1,7 @@
 using UnityEngine;
 
-public class ShipEntity : MonoBehaviour
+public class EntityAction : MonoBehaviour
 {
-    [Range(0,2)] int speedStage = 0;
-
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
