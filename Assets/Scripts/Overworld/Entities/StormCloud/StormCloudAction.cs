@@ -2,5 +2,8 @@ using UnityEngine;
 
 public class StormCloudAction : EntityAction
 {
-    //Hover over ship, then discharge lightning strike
+    protected override void Execute()
+    {
+        Debug.Log("Lightning strikes the ship!");
+    }
 }

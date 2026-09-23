@@ -1,27 +1,19 @@
 using UnityEngine;
 
-public abstract class OverworldEntity : MonoBehaviour, IEncounterable
+public abstract class OverworldEntity : MonoBehaviour
 {
-
-
-
+    [SerializeField] private EntityMovementBehavior _movementBehavior;
+    [SerializeField] private EntityAction _entityAction;
+    
+    private float _curSpeed;
+    
     public Transform target;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        //acquire target (player)
+        
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //move towards player
-        //if in range: take action
-    }
-
-    public virtual void DoEntityAction()
-    {
-        Debug.Log($"Entity {name} has taken an action");
-    }
+    public virtual void DoAction()
+    { _entityAction.Execute(); }
 }
