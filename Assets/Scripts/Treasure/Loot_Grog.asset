@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194507ced4e084d49a65705c8f13e9b6, type: 3}
   m_Name: Loot_Grog
   m_EditorClassIdentifier: Assembly-CSharp::LootTableEntry
-  lootName: DEBUG_GenericLootName
-  weight: 0
+  lootName: Grog
+  weight: 32
+  amount: 16

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Loot_Gold
   m_EditorClassIdentifier: Assembly-CSharp::LootTableEntry
   lootName: Doubloons
-  weight: 0
-  amount: 1
+  weight: 48
+  amount: 250

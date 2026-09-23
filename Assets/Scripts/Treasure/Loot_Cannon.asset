@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Loot_Cannon
   m_EditorClassIdentifier: Assembly-CSharp::LootTableEntry
   lootName: DEBUG_GenericLootName
-  weight: 0
+  weight: 8
+  amount: 1

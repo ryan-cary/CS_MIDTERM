@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c70e4b3747d30c4ebe8d5618e58eef4, type: 3}
   m_Name: DesertIslandTableData
   m_EditorClassIdentifier: Assembly-CSharp::LootTableData
-  tableSize: 256
+  tableSize: 128
   loot:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 68f48635fa6845b44b10ff06c1a0bb1b, type: 2}
+  - {fileID: 11400000, guid: 0b2ba495342cdb24f927493821f0bdf8, type: 2}
+  - {fileID: 11400000, guid: ce20d5bf37d364b47a0bfb15a7066d79, type: 2}
+  - {fileID: 11400000, guid: 8531d73af3e74de4985911210b415712, type: 2}
+  - {fileID: 11400000, guid: db4739582a3d9364f8014732dc32deeb, type: 2}
