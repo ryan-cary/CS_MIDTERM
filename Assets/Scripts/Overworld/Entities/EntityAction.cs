@@ -2,5 +2,5 @@ using UnityEngine;
 
 public abstract class EntityAction : MonoBehaviour
 {
-    protected abstract void Execute();
+    public abstract void Execute();
 }
