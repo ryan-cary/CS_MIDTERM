@@ -7,7 +7,8 @@ public enum IslandType
     Desert,
     Jungle,
     Settlement,
-    Fort
+    Fort,
+    Shipwreck
 }
 
 public class Island : MonoBehaviour
@@ -24,5 +25,10 @@ public class Island : MonoBehaviour
         {
             Debug.Log($"Load island scene {_sceneToLoad}");
         }
+    }
+
+    private void MarkAsLooted()
+    {
+        Debug.Log("Display a jolly roger for successful looting, or a white flag for failure");
     }
 }

@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 1010087555}
   - component: {fileID: 1010087556}
   m_Layer: 0
-  m_Name: Note - World
+  m_Name: Note -  Island
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1312,7 +1312,7 @@ PrefabInstance:
       objectReference: {fileID: 1225027408}
     - target: {fileID: 3391724371321542243, guid: 488f3f7b260e83a9f81e45e995f537f2, type: 3}
       propertyPath: m_VersionIndex
-      value: 8347
+      value: 8353
       objectReference: {fileID: 0}
     - target: {fileID: 8631219785438995054, guid: 488f3f7b260e83a9f81e45e995f537f2, type: 3}
       propertyPath: m_Mesh
