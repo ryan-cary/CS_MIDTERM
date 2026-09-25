@@ -9,6 +9,7 @@ public enum IslandType
     Shipwreck
 }
 
+[CreateAssetMenu(fileName = "IslandData", menuName = "Scriptable Objects/Islands/IslandData")]
 public class IslandData
 {
     [SerializeField] private IslandType _type;
