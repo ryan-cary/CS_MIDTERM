@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe88d7476b98230998f0a7d5d2a93664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Island
-  _sceneToLoad: IslandScene
+  _data: {fileID: 11400000, guid: e06324531a8cde347ac14c356bc0bc08, type: 2}
 --- !u!1 &9075349159068311864
 GameObject:
   m_ObjectHideFlags: 0

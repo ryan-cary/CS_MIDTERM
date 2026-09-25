@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Island : MonoBehaviour
 {
-    private IslandData _data;
+    [SerializeField] private IslandData _data;
 
     private bool _isCompleted;
     //[SerializeField] private string _ambientSound;
