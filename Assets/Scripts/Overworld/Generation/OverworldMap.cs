@@ -26,7 +26,7 @@ public class WorldMap : MonoBehaviour
             _tileMap[i] = new OverworldTile[size];
             for (int j = 0; j < size; j++)
             {
-                _tileMap[i][j] = new OverworldTile();
+                _tileMap[i][j] = TileFactory.GenerateTile();
             }
         }
     }
