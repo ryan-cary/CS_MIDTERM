@@ -1254,10 +1254,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 163494050334057472, guid: 488f3f7b260e83a9f81e45e995f537f2, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1225027408}
     - target: {fileID: 678533568235876926, guid: 488f3f7b260e83a9f81e45e995f537f2, type: 3}
       propertyPath: m_Name
       value: Island
@@ -1302,17 +1298,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2741527054226926757, guid: 488f3f7b260e83a9f81e45e995f537f2, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3391724371321542243, guid: 488f3f7b260e83a9f81e45e995f537f2, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1225027408}
     - target: {fileID: 3391724371321542243, guid: 488f3f7b260e83a9f81e45e995f537f2, type: 3}
       propertyPath: m_VersionIndex
-      value: 8362
+      value: 8377
       objectReference: {fileID: 0}
     - target: {fileID: 8631219785438995054, guid: 488f3f7b260e83a9f81e45e995f537f2, type: 3}
       propertyPath: m_Mesh
