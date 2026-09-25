@@ -3,7 +3,7 @@ using UnityEngine;
 public class OverworldTile : MonoBehaviour
 {
     [SerializeField] private Island island;
-    [SerializeField] private float width = 50f;
+    [SerializeField] private float width = 50f; //width of one side in m
     
     private Transform _islandPosition;
     
