@@ -8,8 +8,6 @@ public class PlayerShip : MonoBehaviour
     
     private int _maxCannonCount = 3;
 
-    private bool shootInput = false; 
-
     public int CannonCount => cannonsPerSide;
 
     public void AddCannons()
