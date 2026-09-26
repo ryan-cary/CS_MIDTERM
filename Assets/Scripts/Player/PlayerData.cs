@@ -8,6 +8,8 @@ public class PlayerData
     private int _gold;
     private int _grog;
 
+    //TODO Add UnityEvents for updating player data
+    
     public float Hitpoints => _hitpoints;
     public int Cannonballs => _cannonballs;
     public int Gold => _gold;
