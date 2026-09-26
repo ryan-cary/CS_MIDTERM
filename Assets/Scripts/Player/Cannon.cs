@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class Cannon : MonoBehaviour
 {
-    [SerializeField] private Cannonball cannonballPrefab;
-    [SerializeField] private int damageMultiplier;
+    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private float projectileVelocity = 25.0f;
+    [SerializeField] private float damageMultiplier = 1.0f;
+    [SerializeField] private Transform barrel;
 
     public void Fire()
     {
