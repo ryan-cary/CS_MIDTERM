@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class PlayerShip : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private int cannonCount;
+    [SerializeField] private int maxCannonCount;
 
-    // Update is called once per frame
-    void Update()
+    public int CannonCount => cannonCount;
+
+    public void AddCannons()
     {
-        
+        if (cannonCount < maxCannonCount)
+            cannonCount++;
+        else
+            Debug.Log("You have the maximum number of cannons already!");
     }
 }
