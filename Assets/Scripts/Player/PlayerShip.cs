@@ -4,21 +4,21 @@ public class PlayerShip : MonoBehaviour
 {
     [SerializeField] private Cannon[] _portCannonArray;
     [SerializeField] private Cannon[] _starboardCannonArray;
-    [SerializeField] private int cannonCount = 1;
+    [SerializeField] private int cannonsPerSide= 1;
     
     private int _maxCannonCount = 3;
 
     private bool shootInput = false; 
 
-    public int CannonCount => cannonCount;
+    public int CannonCount => cannonsPerSide;
 
     public void AddCannons()
     {
-        if (cannonCount < _maxCannonCount)
+        if (cannonsPerSide < _maxCannonCount)
         {
-            cannonCount++;
-            _portCannonArray[cannonCount].gameObject.SetActive(true);
-            _starboardCannonArray[cannonCount].gameObject.SetActive(true);
+            cannonsPerSide++;
+            _portCannonArray[cannonsPerSide].gameObject.SetActive(true);
+            _starboardCannonArray[cannonsPerSide].gameObject.SetActive(true);
         }
         else
             Debug.Log("You have the maximum number of cannons already!");
@@ -35,7 +35,6 @@ public class PlayerShip : MonoBehaviour
     
     public void FireStarboardCannons()
     {
-        Debug.Log("Firing to Starboard");
         /*
         foreach (Cannon cannon in _starboardCannonArray)
             cannon.Fire();
