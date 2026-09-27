@@ -9,16 +9,17 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5414099752524242531}
-  - component: {fileID: 8886900855814098450}
   - component: {fileID: 463361596734355842}
   - component: {fileID: 1155859591214950049}
+  - component: {fileID: 8886900855814098450}
   - component: {fileID: 8000359107224169715}
   - component: {fileID: 2801515473875119209}
   - component: {fileID: 2677927429267314541}
   - component: {fileID: 2475510044064727554}
+  - component: {fileID: 3316711360855749779}
   m_Layer: 0
   m_Name: PlayerShip
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,27 +43,6 @@ Transform:
   - {fileID: 7558977871008956787}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8886900855814098450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 282313698902747607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0d995b0d9b15039caad86d684de3ae8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerShip
-  _portCannonArray:
-  - {fileID: 1017312558798577174}
-  - {fileID: 2086476188778307850}
-  - {fileID: 1309353144525346323}
-  _starboardCannonArray:
-  - {fileID: 4392255502807831087}
-  - {fileID: 7930726450930250621}
-  - {fileID: 4937864898587713394}
-  cannonsPerSide: 1
 --- !u!54 &463361596734355842
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -98,6 +78,27 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282313698902747607}
   m_Enabled: 1
+--- !u!114 &8886900855814098450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282313698902747607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0d995b0d9b15039caad86d684de3ae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerShip
+  _portCannonArray:
+  - {fileID: 1017312558798577174}
+  - {fileID: 2086476188778307850}
+  - {fileID: 1309353144525346323}
+  _starboardCannonArray:
+  - {fileID: 4392255502807831087}
+  - {fileID: 7930726450930250621}
+  - {fileID: 4937864898587713394}
+  cannonsPerSide: 1
 --- !u!114 &8000359107224169715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +219,29 @@ MonoBehaviour:
   movementSpeed: 25
   speedStage: 0
   _forceMode: 0
+--- !u!136 &3316711360855749779
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282313698902747607}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 8
+  m_Height: 48
+  m_Direction: 2
+  m_Center: {x: 0, y: 6, z: -2.38}
 --- !u!1 &316976633084441807
 GameObject:
   m_ObjectHideFlags: 0
