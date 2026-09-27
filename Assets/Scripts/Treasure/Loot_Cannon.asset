@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194507ced4e084d49a65705c8f13e9b6, type: 3}
   m_Name: Loot_Cannon
   m_EditorClassIdentifier: Assembly-CSharp::LootTableEntry
-  lootName: DEBUG_GenericLootName
-  weight: 8
+  type: 4
   amount: 1

@@ -1,10 +1,9 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "LootTable", menuName = "Scriptable Objects/Loot Tables/Loot Table")]
-public class LootTableData : ScriptableObject
+public class LootTable : ScriptableObject
 {
-    public int tableSize = 128;
-
-    public LootTableEntry[] loot;
-
+    private Dictionary<LootType, float> _itemWeights;
+    private Dictionary<LootType, int> _itemAmounts;
 }
