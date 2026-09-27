@@ -4,7 +4,7 @@ public class GameManager : Singleton<GameManager>
 {
     private Player player;
 
-    void Start()
+    void Awake()
     {
         player = new Player();
         player.Data = new PlayerData();

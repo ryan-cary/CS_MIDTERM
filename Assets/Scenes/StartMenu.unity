@@ -3064,6 +3064,10 @@ PrefabInstance:
       value: Island
       objectReference: {fileID: 0}
     - target: {fileID: 678533568235876926, guid: 488f3f7b260e83a9f81e45e995f537f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 678533568235876926, guid: 488f3f7b260e83a9f81e45e995f537f2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
