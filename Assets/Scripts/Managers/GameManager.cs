@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Player player;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        player = new Player();
+        player.Data = new PlayerData();
+        player.Ship = new PlayerShip();
     }
 }
