@@ -29,13 +29,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 834495025572224765}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3, y: 0.35, z: -0.79}
+  m_LocalRotation: {x: -0, y: -0.31737462, z: -0, w: 0.9483003}
+  m_LocalPosition: {x: -1.6, y: 0.96, z: -1.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7490400009898148149}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -37.008, z: 0}
 --- !u!114 &1162367142690590158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,7 +667,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 678533568235876926, guid: 488f3f7b260e83a9f81e45e995f537f2, type: 3}
       propertyPath: m_Name
-      value: Island_Marked
+      value: Desert_Island_Marked
       objectReference: {fileID: 0}
     - target: {fileID: 2741527054226926757, guid: 488f3f7b260e83a9f81e45e995f537f2, type: 3}
       propertyPath: m_LocalPosition.x
