@@ -144,39 +144,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  inputButtons:
-  - buttonName: SpeedUp
-    buttonAction:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2475510044064727554}
-          m_TargetAssemblyTypeName: StageBasedMovementScheme, Assembly-CSharp
-          m_MethodName: SpeedUp
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - buttonName: SlowDown
-    buttonAction:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2475510044064727554}
-          m_TargetAssemblyTypeName: StageBasedMovementScheme, Assembly-CSharp
-          m_MethodName: SlowDown
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  inputButtons: []
 --- !u!114 &2801515473875119209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +152,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282313698902747607}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7cdde0bd638599549ac38b217751e2d5, type: 3}
   m_Name: 
@@ -211,14 +179,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282313698902747607}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75988fe7ff5ed2b4da740e4b4a6ddfc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageBasedMovementScheme
   movementSpeed: 25
+  shipSpeed: 20
   speedStage: 0
-  _forceMode: 0
 --- !u!136 &3316711360855749779
 CapsuleCollider:
   m_ObjectHideFlags: 0
