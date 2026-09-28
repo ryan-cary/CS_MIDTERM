@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Island : MonoBehaviour
 {
-    [SerializeField] private IslandData _data;
+    [SerializeField] private IslandData data;
+    [SerializeField] private Transform respawn; 
 
     private bool _isCompleted;
     //[SerializeField] private string _ambientSound;
@@ -13,8 +14,8 @@ public class Island : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log($"Load island scene of type {_data.Type}");
-            SceneManager.Instance.Load(_data.SceneToLoad);
+            Debug.Log($"Load island scene of type {data.Type}");
+            SceneManager.Instance.Load(data.SceneToLoad);
         }
     }
 

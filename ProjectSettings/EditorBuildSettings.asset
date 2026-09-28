@@ -6,6 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 8a30f9cb0d53c431a86706507f170443
+  - enabled: 1
+    path: Assets/Scenes/Overworld.unity
+    guid: 7dba5c35ea2b5bd49b66bc5f49fd4f19
+  - enabled: 1
+    path: Assets/Scenes/IslandScenes/FortScene.unity
+    guid: c576db022d731d240a5647e8e85b32af
+  - enabled: 1
+    path: Assets/Scenes/IslandScenes/DesertIslandScene.unity
+    guid: 4c986675af3001c4e93fb832c575e51c
+  - enabled: 1
+    path: Assets/Scenes/IslandScenes/JungleIslandScene.unity
+    guid: 4076388606b94ad40b7e0ce100e7c497
+  - enabled: 1
+    path: Assets/Scenes/IslandScenes/SettlementScene.unity
+    guid: 4ec5ee29b0a390f49b6d48ba4e25c976
+  - enabled: 1
+    path: Assets/Scenes/IslandScenes/ShipwreckScene.unity
+    guid: 47ff5c30b6b377148802f2a549a4d573
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:

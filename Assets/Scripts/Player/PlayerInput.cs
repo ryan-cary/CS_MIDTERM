@@ -68,12 +68,12 @@ public class PlayerInput : MonoBehaviour
             axis.FireAction();
         }
         
-        /*
+        
         foreach (var button in inputButtons)
         {
             button.GetValue();
             button.FireAction();
         }
-        */
+        
     }
 }
