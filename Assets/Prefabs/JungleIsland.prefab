@@ -102,6 +102,7 @@ Transform:
   - {fileID: 5104527707444631584}
   - {fileID: 1165031419101729220}
   - {fileID: 1788231716197229686}
+  - {fileID: 8200786086520708806}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8114748001521259105
@@ -116,7 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe88d7476b98230998f0a7d5d2a93664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Island
-  _data: {fileID: 11400000, guid: d08fc48ac04292e46b1a9efd3a29cf65, type: 2}
+  data: {fileID: 11400000, guid: d08fc48ac04292e46b1a9efd3a29cf65, type: 2}
+  respawn: {fileID: 8200786086520708806}
 --- !u!82 &2196625829481500992
 AudioSource:
   m_ObjectHideFlags: 0
@@ -969,7 +971,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2879
+  m_VersionIndex: 2891
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1080,6 +1082,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &4721035301248574031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8200786086520708806}
+  m_Layer: 0
+  m_Name: RespawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8200786086520708806
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721035301248574031}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.22664689, z: -0, w: 0.9739771}
+  m_LocalPosition: {x: 104.75818, y: 0, z: -40.521683}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2114828230068587457}
+  m_LocalEulerAnglesHint: {x: 0, y: 26.199, z: 0}
 --- !u!1 &5662904121156030088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,7 +1845,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2788
+  m_VersionIndex: 2800
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3194,7 +3227,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 6606
+  m_VersionIndex: 6618
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

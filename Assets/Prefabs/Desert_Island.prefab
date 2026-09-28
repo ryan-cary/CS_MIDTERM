@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2741527054226926757
 Transform:
   m_ObjectHideFlags: 0
@@ -36,6 +36,7 @@ Transform:
   - {fileID: 8985335679222576054}
   - {fileID: 2292829188407340625}
   - {fileID: 6298302342919073741}
+  - {fileID: 1559889577278844199}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &2536367527407917663
@@ -73,7 +74,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe88d7476b98230998f0a7d5d2a93664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Island
-  _data: {fileID: 11400000, guid: e06324531a8cde347ac14c356bc0bc08, type: 2}
+  data: {fileID: 11400000, guid: e06324531a8cde347ac14c356bc0bc08, type: 2}
+  respawn: {fileID: 1559889577278844199}
 --- !u!82 &3828297580205244255
 AudioSource:
   m_ObjectHideFlags: 0
@@ -171,6 +173,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &2743847129065323238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1559889577278844199}
+  m_Layer: 0
+  m_Name: RespawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1559889577278844199
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2743847129065323238}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.339293, y: 0, z: -0.14958827}
+  m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2741527054226926757}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9075349159068311864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,7 +1101,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 8467
+  m_VersionIndex: 8479
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
