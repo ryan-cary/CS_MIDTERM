@@ -1,19 +1,33 @@
 using UnityEngine;
+using UnityEngine.AI;
 
-public abstract class OverworldEntity : MonoBehaviour
+public class OverworldEntity : MonoBehaviour
 {
-    [SerializeField] private EntityMovementBehavior _movementBehavior;
-    [SerializeField] private EntityAction _entityAction;
-    
-    private float _curSpeed;
-    
-    public Transform target;
+    private EntityState _currentState;
 
-    private void Start()
+    [SerializeField] private EntityAction action;
+
+    public Transform entityEye;
+    public float sightRadius;
+    public float sightDistance;
+    public NavMeshAgent agent;
+
+    [HideInInspector] public Transform player;
+
+    void Start()
     {
-        
+        agent = GetComponent<NavMeshAgent>();
+        _currentState = new EntityPassiveState(this);
+        _currentState.OnStateEnter();
     }
 
-    public virtual void DoAction()
-    { _entityAction.Execute(); }
+    void Update()
+    { _currentState.OnStateUpdate(); }
+
+    public void ChangeState(EntityState state)
+    {
+        _currentState.OnStateExit();
+        _currentState = state;
+        _currentState.OnStateEnter();
+    }
 }
