@@ -21,7 +21,7 @@ public class OverworldEntity : MonoBehaviour
         _currentState.OnStateEnter();
     }
 
-    void Update()
+    protected void Update()
     { _currentState.OnStateUpdate(); }
 
     public void ChangeState(EntityState state)
