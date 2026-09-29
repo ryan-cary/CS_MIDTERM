@@ -3,7 +3,7 @@ using UnityEngine.AI;
 
 public class EntityPassiveState : EntityState
 {
-    private float _wanderRadius = 50f;
+    private float _wanderRadius = 150f;
     private float _wanderTime = 8f;
 
     private float _timer;
