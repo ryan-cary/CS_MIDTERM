@@ -14,7 +14,7 @@ public class OverworldEntity : MonoBehaviour
 
     [HideInInspector] public Transform player;
 
-    void Start()
+    protected void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         _currentState = new EntityPassiveState(this);

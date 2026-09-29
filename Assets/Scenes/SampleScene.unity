@@ -2333,6 +2333,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kraken
       objectReference: {fileID: 0}
+    - target: {fileID: 7800610478523973823, guid: d245dad8e1c232c4ba54231d780584db, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2468,7 +2472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5414099752524242531, guid: dd56e302f79cecd4f832f9299922ab0a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 106.1
+      value: 30.4
       objectReference: {fileID: 0}
     - target: {fileID: 5414099752524242531, guid: dd56e302f79cecd4f832f9299922ab0a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2476,7 +2480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5414099752524242531, guid: dd56e302f79cecd4f832f9299922ab0a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -100
+      value: -148.3
       objectReference: {fileID: 0}
     - target: {fileID: 5414099752524242531, guid: dd56e302f79cecd4f832f9299922ab0a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2715,7 +2719,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4832296622708274149, guid: 9fcfbc40fb0b8d7479356f48e63d1ef7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 96
+      value: 74.2
       objectReference: {fileID: 0}
     - target: {fileID: 4832296622708274149, guid: 9fcfbc40fb0b8d7479356f48e63d1ef7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2757,10 +2761,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StormCloud
       objectReference: {fileID: 0}
-    - target: {fileID: 7743071519547067336, guid: 9fcfbc40fb0b8d7479356f48e63d1ef7, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: d2246ba1d38bf864aab11799166111c2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
