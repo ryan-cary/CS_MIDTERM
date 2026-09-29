@@ -2567,6 +2567,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ocean
       objectReference: {fileID: 0}
+    - target: {fileID: 3279048402653945869, guid: c5b4a74e5bb279e4d882a8accc089a5e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279048402653945869, guid: c5b4a74e5bb279e4d882a8accc089a5e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279048402653945869, guid: c5b4a74e5bb279e4d882a8accc089a5e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2705,6 +2717,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3314892735983112820, guid: 9fcfbc40fb0b8d7479356f48e63d1ef7, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3314892735983112820, guid: 9fcfbc40fb0b8d7479356f48e63d1ef7, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0.44879463
+      objectReference: {fileID: 0}
+    - target: {fileID: 3314892735983112820, guid: 9fcfbc40fb0b8d7479356f48e63d1ef7, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0.5235849
+      objectReference: {fileID: 0}
+    - target: {fileID: 3314892735983112820, guid: 9fcfbc40fb0b8d7479356f48e63d1ef7, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 0.8610134
+      objectReference: {fileID: 0}
+    - target: {fileID: 3314892735983112820, guid: 9fcfbc40fb0b8d7479356f48e63d1ef7, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3314892735983112820, guid: 9fcfbc40fb0b8d7479356f48e63d1ef7, type: 3}
+      propertyPath: m_Parameters.colorGradient.m_ColorSpace
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4832296622708274149, guid: 9fcfbc40fb0b8d7479356f48e63d1ef7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 74.2
