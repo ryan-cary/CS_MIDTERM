@@ -14,13 +14,17 @@ public class Island : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log($"Load island scene of type {data.Type}");
-            SceneManager.Instance.Load(data.SceneToLoad);
+            GameManager.Instance.GetSceneLoader().LoadIsland(data.SceneToLoad);
         }
     }
 
     private void MarkConquered()
     {
         Debug.Log("Display jolly roger on island");
+    }
+
+    public Transform GetRespawnTransform()
+    {
+        return respawn;
     }
 }
