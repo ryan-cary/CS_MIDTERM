@@ -119,6 +119,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &76374904
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4821669015489227549, guid: e29525a744b82cc4f9dc066c822db6cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.33994
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821669015489227549, guid: e29525a744b82cc4f9dc066c822db6cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.29888
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821669015489227549, guid: e29525a744b82cc4f9dc066c822db6cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.84783
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821669015489227549, guid: e29525a744b82cc4f9dc066c822db6cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821669015489227549, guid: e29525a744b82cc4f9dc066c822db6cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821669015489227549, guid: e29525a744b82cc4f9dc066c822db6cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821669015489227549, guid: e29525a744b82cc4f9dc066c822db6cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821669015489227549, guid: e29525a744b82cc4f9dc066c822db6cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821669015489227549, guid: e29525a744b82cc4f9dc066c822db6cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821669015489227549, guid: e29525a744b82cc4f9dc066c822db6cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5518205443326393673, guid: e29525a744b82cc4f9dc066c822db6cd, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e29525a744b82cc4f9dc066c822db6cd, type: 3}
 --- !u!1 &267662115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,50 +1092,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950868413}
   m_CullTransparentMesh: 1
---- !u!1 &2028133162
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2028133164}
-  - component: {fileID: 2028133163}
-  m_Layer: 0
-  m_Name: SceneLoader
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2028133163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2028133162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84980c0a9107dba4688b3ad120e338fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneManager
---- !u!4 &2028133164
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2028133162}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2071164681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,10 +1175,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2028133163}
-        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
-        m_MethodName: Load
-        m_Mode: 5
+      - m_Target: {fileID: 3753207566038860635, guid: e29525a744b82cc4f9dc066c822db6cd, type: 3}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: UnloadIsland
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1220,4 +1233,4 @@ SceneRoots:
   - {fileID: 837885313}
   - {fileID: 1751232950}
   - {fileID: 860438066}
-  - {fileID: 2028133164}
+  - {fileID: 76374904}
