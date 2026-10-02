@@ -14,7 +14,7 @@ public class Island : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameManager.Instance.GetSceneLoader().LoadIsland(data.SceneToLoad);
+            GameManager.Instance.GetSceneLoader().LoadIsland(data.SceneToLoad, respawn);
         }
     }
 

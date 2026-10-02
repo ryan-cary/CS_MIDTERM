@@ -1,8 +1,10 @@
 using UnityEngine;
 
-public static class TransactionHandler
+public class LootSource : MonoBehaviour
 {
-    public static void LootIsland(LootItem treasure)
+    [SerializeField] private LootItem treasure;
+    
+    public void GiveLoot()
     {
         switch (treasure.type)
         {

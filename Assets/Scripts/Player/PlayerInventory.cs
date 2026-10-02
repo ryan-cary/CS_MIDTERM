@@ -3,9 +3,9 @@ using UnityEngine.Events;
 
 public class PlayerInventory : MonoBehaviour
 {
-    private int _cannonballs;
-    private int _gold;
-    private int _grog;
+    [SerializeField] private int _cannonballs;
+    [SerializeField] private int _gold;
+    [SerializeField] private int _grog;
 
     public UnityEvent OnGoldUpdate;
     public UnityEvent OnGrogUpdate;
