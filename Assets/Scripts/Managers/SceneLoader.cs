@@ -25,7 +25,7 @@ public class SceneLoader : Singleton<SceneLoader>
     public void UnloadIsland()
     {
         Scene sceneToUnload = SceneManager.GetActiveScene();
-        //GameManager.Instance.GetPlayer().Ship.transform.position = _respawn.position;
+        GameManager.Instance.GetPlayer().Ship.transform.position = _respawn.position;
         SceneManager.SetActiveScene(overworld);
         SceneManager.UnloadSceneAsync(sceneToUnload);
 
