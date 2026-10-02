@@ -15,6 +15,7 @@ public class GameManager : Singleton<GameManager>
 
     private SceneLoader _sceneLoader;
     
+    /*
     private GameplayState _gameState;
     public GameplayState GameState
     {
@@ -22,22 +23,18 @@ public class GameManager : Singleton<GameManager>
     }
 
     public UnityEvent<GameplayState, GameplayState> OnGameStateChanged = new UnityEvent<GameplayState, GameplayState>();
+    */
 
-    void Awake()
+    protected override void Awake()
     {
-        player = new Player();
-        player.Ship = new PlayerShip();
-        
-        _gameState = GameplayState.MainMenu;
+        base.Awake();
         _sceneLoader = GetComponent<SceneLoader>();
-        Debug.Log(_sceneLoader);
     }
-
-    public static GameManager GetInstance()
-    { return Instance; }
 
     public Player GetPlayer()
     {
+        if (player == null)
+            player = GetComponent<Player>();
         return player;
     }
 

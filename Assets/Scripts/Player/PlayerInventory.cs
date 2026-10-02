@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerInventory
+public class PlayerInventory : MonoBehaviour
 {
     private int _cannonballs;
     private int _gold;

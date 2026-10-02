@@ -26,7 +26,7 @@ public class PlayerHUD : MonoBehaviour
 
     private void SubscribeToHUDEvents()
     {
-        Player p = GameManager.Instance.GetPlayer();//.OnHPUpdate.AddListener(UpdateHitpoints);
+        GameManager.Instance.GetPlayer().Ship.OnHPUpdate.AddListener(UpdateHitpoints);
         SubscribeToInventoryEvents();
     }
 
@@ -39,21 +39,21 @@ public class PlayerHUD : MonoBehaviour
 
     private void UpdateHitpoints()
     {
-        _hitpointsText.text = GameManager.Instance.GetPlayer().HP.ToString("0.0");
+        _hitpointsText.text = GameManager.Instance.GetPlayer().Ship.HP.ToString("0");
     }
 
     private void UpdateGold()
     {
-        _goldText.text = GameManager.Instance.GetPlayer().Inventory.Gold.ToString("0.0");
+        _goldText.text = GameManager.Instance.GetPlayer().Inventory.Gold.ToString("0");
     }
 
     private void UpdateGrog()
     {
-        _grogText.text = GameManager.Instance.GetPlayer().Inventory.Grog.ToString("0.0");
+        _grogText.text = GameManager.Instance.GetPlayer().Inventory.Grog.ToString("0");
     }
 
     private void UpdateCannonballs()
     {
-        _cannonballsText.text = GameManager.Instance.GetPlayer().Inventory.Cannonballs.ToString("0.0");
+        _cannonballsText.text = GameManager.Instance.GetPlayer().Inventory.Cannonballs.ToString("0");
     }
 }

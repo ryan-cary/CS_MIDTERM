@@ -1,32 +1,16 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Player
+public class Player : MonoBehaviour
 {
-    private PlayerInventory _inventory;
-    private float _hitpoints;
+    [SerializeField] private PlayerInventory _inventory;
     
     [SerializeField] private PlayerShip _ship;
 
-    public UnityEvent OnHPUpdate;
-
-    public Player()
+    private void Start()
     {
-        this._inventory = new PlayerInventory();
-        this._hitpoints = 100;
-        this._ship = Object.FindFirstObjectByType<PlayerShip>();
+        _ship = FindFirstObjectByType<PlayerShip>();
     }
-    
-    //TODO when creating a player, if no PlayerShip in scene, how to assign PlayerShip?
-
-    public Player(PlayerData pData)
-    {
-        this._inventory = new PlayerInventory(pData);
-        this._hitpoints = pData.Hitpoints;
-        this._ship = Object.FindFirstObjectByType<PlayerShip>();
-    }
-
-    public float HP => _hitpoints;
 
     public PlayerInventory Inventory
     {
@@ -38,21 +22,5 @@ public class Player
     {
         get => _ship;
         set => _ship = value;
-    }
-
-    public void TakeDamage(float damage)
-    {
-        _hitpoints -= damage;
-        if (_hitpoints <= 0)
-        {
-            SceneLoader.Instance.Load("GameOver");
-        }
-    }
-
-    public void RepairDamage(float repair)
-    {
-        _hitpoints += repair;
-        if (_hitpoints > 100)
-            _hitpoints = 100;
     }
 }
