@@ -1,11 +1,14 @@
 using UnityEngine;
+using UnityEngine.Events;
 
-public class Player : MonoBehaviour
+public class Player
 {
     private PlayerInventory _inventory;
     private float _hitpoints;
     
     [SerializeField] private PlayerShip _ship;
+
+    public UnityEvent OnHPUpdate;
 
     public Player()
     {
@@ -22,6 +25,8 @@ public class Player : MonoBehaviour
         this._hitpoints = pData.Hitpoints;
         this._ship = Object.FindFirstObjectByType<PlayerShip>();
     }
+
+    public float HP => _hitpoints;
 
     public PlayerInventory Inventory
     {

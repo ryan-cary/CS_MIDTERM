@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50bc046bee087a36da20ad06b9d80a02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  player: {fileID: 0}
   OnGameStateChanged:
     m_PersistentCalls:
       m_Calls: []
