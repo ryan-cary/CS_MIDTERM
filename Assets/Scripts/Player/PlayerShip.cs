@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -33,8 +34,12 @@ public class PlayerShip : MonoBehaviour
     [Header("Cannons")]
     [SerializeField] private Cannon[] _portCannonArray;
     [SerializeField] private Cannon[] _starboardCannonArray;
-    [SerializeField] private int cannonsPerSide= 1;
+
+    private bool _portFireInput = false;
+    private bool _starboardFireInput = false;
     
+    /*
+     [SerializeField] private int cannonsPerSide= 1;
     private int _maxCannonCount = 3;
 
     public int CannonCount => cannonsPerSide;
@@ -52,22 +57,36 @@ public class PlayerShip : MonoBehaviour
         else
             Debug.Log("You have the maximum number of cannons already!");
     }
+    */
 
-    public void FirePortCannons()
+    private void Update()
     {
-        
-        /*
+        if(_portFireInput)
+            FirePortCannons();
+        if(_starboardFireInput)
+            FireStarboardCannons();
+    }
+
+    private void FirePortCannons()
+    {
         foreach (Cannon cannon in _portCannonArray)
             cannon.Fire();
-            */
     }
     
-    public void FireStarboardCannons()
+    private void FireStarboardCannons()
     {
-        /*
         foreach (Cannon cannon in _starboardCannonArray)
             cannon.Fire();
-            */
+    }
+
+    public void SetPortFireInput(bool value)
+    {
+        _portFireInput = value;
+    }
+    
+    public void SetStarboardFireInput(bool value)
+    {
+        _starboardFireInput = value;
     }
 
     #endregion

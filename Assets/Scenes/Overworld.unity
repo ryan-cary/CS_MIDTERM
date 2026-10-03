@@ -1080,17 +1080,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!114 &501992718 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2475510044064727554, guid: dd56e302f79cecd4f832f9299922ab0a, type: 3}
-  m_PrefabInstance: {fileID: 1836687462}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75988fe7ff5ed2b4da740e4b4a6ddfc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StageBasedMovementScheme
 --- !u!43 &609951175
 Mesh:
   m_ObjectHideFlags: 0
@@ -2865,14 +2854,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShip
       objectReference: {fileID: 0}
-    - target: {fileID: 2475510044064727554, guid: dd56e302f79cecd4f832f9299922ab0a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2801515473875119209, guid: dd56e302f79cecd4f832f9299922ab0a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5414099752524242531, guid: dd56e302f79cecd4f832f9299922ab0a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2914,16 +2895,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8000359107224169715, guid: dd56e302f79cecd4f832f9299922ab0a, type: 3}
-      propertyPath: inputAxes.Array.data[0].axisAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 501992718}
-    - target: {fileID: 8000359107224169715, guid: dd56e302f79cecd4f832f9299922ab0a, type: 3}
-      propertyPath: inputAxes.Array.data[0].axisAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetVerticalInput
+      propertyPath: inputButtons.Array.data[0].buttonAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8000359107224169715, guid: dd56e302f79cecd4f832f9299922ab0a, type: 3}
-      propertyPath: inputAxes.Array.data[0].axisAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SpeedStageMovementScheme, Assembly-CSharp
+      propertyPath: inputButtons.Array.data[1].buttonAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

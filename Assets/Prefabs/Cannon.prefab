@@ -104,9 +104,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2af5acf085a907b47921aa40aa6d1e7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cannon
-  projectilePrefab: {fileID: 0}
-  projectileVelocity: 0
-  damageMultiplier: 0
+  projectileVelocity: 25
+  barrel: {fileID: 1430049326662882550}
+  cannonballs: {fileID: 7344892129048309777, guid: 2b109b132337e74418b64073e440125f, type: 3}
 --- !u!1 &5172206405489904527
 GameObject:
   m_ObjectHideFlags: 0

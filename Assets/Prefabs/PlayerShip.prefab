@@ -101,7 +101,6 @@ MonoBehaviour:
   - {fileID: 4392255502807831087}
   - {fileID: 7930726450930250621}
   - {fileID: 4937864898587713394}
-  cannonsPerSide: 1
 --- !u!114 &8000359107224169715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,7 +146,39 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  inputButtons: []
+  inputButtons:
+  - buttonName: Fire1
+    buttonAction:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8886900855814098450}
+          m_TargetAssemblyTypeName: PlayerShip, Assembly-CSharp
+          m_MethodName: SetPortFireInput
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - buttonName: Fire2
+    buttonAction:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8886900855814098450}
+          m_TargetAssemblyTypeName: PlayerShip, Assembly-CSharp
+          m_MethodName: SetStarboardFireInput
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!114 &2801515473875119209
 MonoBehaviour:
   m_ObjectHideFlags: 0
