@@ -12,29 +12,26 @@ public class SpeedStageMovementScheme : PlayerShipMovementScheme
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    public void SpeedUp()
-    {
-        speedStage++;
-        Debug.Log("Speeding up!");
-    }
-
-    public void SlowDown()
-    {
-        speedStage--;
-        Debug.Log("Slowing down!");
-    }
-
-    private Vector3 CalculateMovementVector()
+    private Vector3 CalculateCourseVector()
     {
         Quaternion heading = gameObject.transform.rotation;
-        Vector3 movementVector = heading * Vector3.forward;
+        Vector3 courseVector = heading * Vector3.forward;
 
-        return movementVector;
+        return courseVector.normalized;
     }
     
     protected override void ApplyMovement(Vector3 movementVector)
     {
-        _rigidbody.linearVelocity = CalculateMovementVector() * (shipSpeed * speedStage * Time.deltaTime);
+        Vector3 verticalMovement = Vector3.Project(movementVector, gameObject.transform.forward);
+        
+        if (Vector3.Dot(verticalMovement, gameObject.transform.forward) > 0.25f)
+            speedStage += 1;
+        else if (Vector3.Dot(verticalMovement, gameObject.transform.forward) < -0.25f)
+            speedStage -= 1;
+        
+        Vector3 course = CalculateCourseVector();
+        
+        _rigidbody.linearVelocity = course * (shipSpeed * speedStage * Time.deltaTime);
         
     }
 }

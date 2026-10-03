@@ -25,7 +25,7 @@ public class DebugMovementScheme : PlayerShipMovementScheme
     {
         if (movementVector == Vector3.zero)
         {
-            _rigidbody.angularVelocity = movementVector;
+            _rigidbody.linearVelocity = movementVector;
         }
         else
         {

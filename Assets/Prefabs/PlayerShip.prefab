@@ -119,8 +119,8 @@ MonoBehaviour:
     axisAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2801515473875119209}
-          m_TargetAssemblyTypeName: DebugMovementScheme, Assembly-CSharp
+        - m_Target: {fileID: 2475510044064727554}
+          m_TargetAssemblyTypeName: SpeedStageMovementScheme, Assembly-CSharp
           m_MethodName: SetVerticalInput
           m_Mode: 0
           m_Arguments:
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282313698902747607}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7cdde0bd638599549ac38b217751e2d5, type: 3}
   m_Name: 
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282313698902747607}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75988fe7ff5ed2b4da740e4b4a6ddfc6, type: 3}
   m_Name: 
