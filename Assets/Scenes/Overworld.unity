@@ -2894,14 +2894,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8000359107224169715, guid: dd56e302f79cecd4f832f9299922ab0a, type: 3}
-      propertyPath: inputButtons.Array.data[0].buttonAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8000359107224169715, guid: dd56e302f79cecd4f832f9299922ab0a, type: 3}
-      propertyPath: inputButtons.Array.data[1].buttonAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
