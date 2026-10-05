@@ -5,6 +5,7 @@ public class PlayerShip : MonoBehaviour
 {
     #region Hitpoints
 
+    [SerializeField] private float _maxHitpoints = 100;
     [SerializeField] private float _hitpoints = 100;
     public UnityEvent OnHPUpdate;
     
@@ -13,17 +14,22 @@ public class PlayerShip : MonoBehaviour
     public void TakeDamage(float damage)
     {
         _hitpoints -= damage;
-        if (_hitpoints <= 0)
-        {
-            SceneLoader.Instance.Load("GameOver-Destroyed");
-        }
+        OnHPUpdate?.Invoke();
     }
 
     public void RepairDamage(float repair)
     {
         _hitpoints += repair;
-        if (_hitpoints > 100)
-            _hitpoints = 100;
+        if (_hitpoints > _maxHitpoints)
+            _hitpoints = _maxHitpoints;
+    }
+
+    private void CheckForDestruction()
+    {
+        if (_hitpoints <= 0)
+        {
+            SceneLoader.Instance.Load("GameOver-Destroyed");
+        }
     }
 
     #endregion
@@ -74,6 +80,7 @@ public class PlayerShip : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instance.GetPlayer().Ship = this;
+        _hitpoints = _maxHitpoints;
+        OnHPUpdate.AddListener(CheckForDestruction);
     }
 }
