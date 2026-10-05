@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float grogConsumptionRate = 20.0f;
     [SerializeField] private int grogConsumptionAmount = 1;
 
-    private void Start()
+    private void Awake()
     {
         Initialize();
         StartCoroutine(GrogConsumptionCoroutine());
