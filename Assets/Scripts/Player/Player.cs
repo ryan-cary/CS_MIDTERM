@@ -54,8 +54,5 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(grogConsumptionRate);
             Inventory.RemoveGrog(1);
         }
-        
-        if (Inventory.Grog <= 0)
-            SceneLoader.Instance.Load("GameOver-Mutiny");
     }
 }

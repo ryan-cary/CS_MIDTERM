@@ -84,7 +84,6 @@ public class PlayerInventory : MonoBehaviour
     {
         _grog -= value;
         OnGrogUpdate?.Invoke();
-        CheckForMutiny();
     }
 
     private void CheckForMutiny()
