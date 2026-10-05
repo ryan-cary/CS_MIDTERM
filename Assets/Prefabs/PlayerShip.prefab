@@ -101,7 +101,7 @@ MonoBehaviour:
   - {fileID: 4392255502807831087}
   - {fileID: 7930726450930250621}
   - {fileID: 4937864898587713394}
-  cannonsPerSide: 1
+  cannonsPerSide: 3
 --- !u!114 &8000359107224169715
 MonoBehaviour:
   m_ObjectHideFlags: 0
