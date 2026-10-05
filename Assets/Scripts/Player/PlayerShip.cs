@@ -5,7 +5,7 @@ public class PlayerShip : MonoBehaviour
 {
     #region Hitpoints
 
-    private float _hitpoints = 100;
+    [SerializeField] private float _hitpoints = 100;
     public UnityEvent OnHPUpdate;
     
     public float HP => _hitpoints;
@@ -15,7 +15,7 @@ public class PlayerShip : MonoBehaviour
         _hitpoints -= damage;
         if (_hitpoints <= 0)
         {
-            SceneLoader.Instance.Load("GameOver");
+            SceneLoader.Instance.Load("GameOver-Destroyed");
         }
     }
 
