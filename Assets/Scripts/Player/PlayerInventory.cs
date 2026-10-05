@@ -83,12 +83,13 @@ public class PlayerInventory : MonoBehaviour
     public void RemoveGrog(int value)
     {
         _grog -= value;
-        OnGrogUpdate?.Invoke();        
+        OnGrogUpdate?.Invoke();
+        CheckForMutiny();
     }
 
     private void CheckForMutiny()
     {
         if (_grog <= 0)
-            Debug.Log("You are out of grog! Your crew has mutinied!");
+            SceneLoader.Instance.Load("GameOver-Mutiny");
     }
 }
