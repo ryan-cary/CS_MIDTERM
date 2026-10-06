@@ -1,13 +1,50 @@
 using UnityEngine;
+using UnityEngine.Events;
+
+public enum GameplayState
+{
+    MainMenu,
+    Overworld,
+    Island,
+    GameOver
+}
 
 public class GameManager : Singleton<GameManager>
 {
-    private Player player;
+    [SerializeField] private Player player;
 
-    void Awake()
+    private SceneLoader _sceneLoader;
+    
+    /*
+    private GameplayState _gameState;
+    public GameplayState GameState
     {
-        player = new Player();
-        player.Data = new PlayerData();
-        player.Ship = new PlayerShip();
+        get { return _gameState; }
+    }
+
+    public UnityEvent<GameplayState, GameplayState> OnGameStateChanged = new UnityEvent<GameplayState, GameplayState>();
+    */
+
+    protected override void Awake()
+    {
+        base.Awake();
+        _sceneLoader = GetComponent<SceneLoader>();
+    }
+
+    public Player GetPlayer()
+    {
+        if (player == null)
+            player = GetComponent<Player>();
+        return player;
+    }
+
+    public SceneLoader GetSceneLoader()
+    {
+        return _sceneLoader;
+    }
+
+    public void SetPlayer(Player p)
+    {
+        this.player = p;
     }
 }

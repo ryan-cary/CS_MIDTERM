@@ -1,0 +1,103 @@
+using UnityEngine;
+using UnityEngine.Events;
+
+public class PlayerInventory : MonoBehaviour
+{
+    [SerializeField] private int _cannonballs;
+    [SerializeField] private int _gold;
+    [SerializeField] private int _grog;
+    
+    [SerializeField] private static int winAmount = 15000;
+
+    public UnityEvent OnGoldUpdate;
+    public UnityEvent OnGrogUpdate;
+    public UnityEvent OnCannonballsUpdate;
+
+    public int Cannonballs => _cannonballs;
+    public int Gold => _gold;
+    public int Grog => _grog;
+
+
+    public PlayerInventory()
+    {
+        this._cannonballs = 24;
+        this._gold = 0;
+        this._grog = 100;
+    }
+    
+    public PlayerInventory(PlayerData pData)
+    {
+        this._cannonballs = pData.Cannonballs;
+        this._gold = pData.Gold;
+        this._grog = pData.Grog;
+    }
+
+    private void Start()
+    {
+        OnGrogUpdate.AddListener(CheckForMutiny);
+        OnGoldUpdate.AddListener(CheckForWin);
+    }
+    
+    public void AddCannonballs(int value)
+    {
+        _cannonballs += value;
+        OnCannonballsUpdate?.Invoke();
+    }
+
+    public void RemoveCannonballs(int value)
+    {
+        if (_cannonballs <= 0)
+        {
+            Debug.Log("You are out of cannonballs!");
+            _cannonballs = 0;
+        }
+        _cannonballs -= value;
+        OnCannonballsUpdate?.Invoke();
+    }
+
+    public void AddGold(int value)
+    {
+        _gold += value;
+        OnGoldUpdate?.Invoke();
+    }
+
+    public bool RemoveGold(int value)
+    {
+        if (_gold < value)
+        {
+            Debug.Log("You don't have enough money!");
+            return false;
+        }
+        else
+        {
+            _gold -= value;
+            OnGoldUpdate?.Invoke();
+            return true;
+        }       
+        
+    }
+
+    public void AddGrog(int value)
+    {
+        _grog += value;
+        OnGrogUpdate?.Invoke();
+    }
+
+    public void RemoveGrog(int value)
+    {
+        _grog -= value;
+        OnGrogUpdate?.Invoke();
+    }
+
+    private void CheckForMutiny()
+    {
+        if (_grog <= 0)
+            SceneLoader.Instance.Load("GameOver-Mutiny");
+    }
+
+    private void CheckForWin()
+    {
+        if (_gold >= winAmount)
+            SceneLoader.Instance.Load("VictoryScreen");
+    }
+}
