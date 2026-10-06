@@ -3,37 +3,55 @@ using UnityEngine;
 
 public class OverworldTile : MonoBehaviour
 {
+    [Header("Island Parameters")]
     [SerializeField] private int maxNumIslands = 5;
     [SerializeField] private float minRadius = 200;
     [SerializeField] private float maxRadius = 600;
     
-    private IslandFactory _factory;
+    private IslandFactory _islandFactory;
 
-    //private List<GameObject> _islands;
+    [Header("Entity Parameters")] 
+    [SerializeField] private int maxNumEntities = 2;
+    [SerializeField] private int numEntitiesOffset;
+    [SerializeField] private float spawnRadius = 400;
 
-    //public List<GameObject> IslandList => _islands;
+    private EntityFactory _entityFactory;
     
     void Start()
     {
-        _factory = FindFirstObjectByType<IslandFactory>();
+        _islandFactory = FindFirstObjectByType<IslandFactory>();
+        _entityFactory = FindFirstObjectByType<EntityFactory>();
         
         int numIslands = Random.Range(0, maxNumIslands+1);
-        GenerateIslands(numIslands);
+        GenerateIslands();
+        GenerateEntities();
     }
 
-    private void GenerateIslands(int numIslands)
+    private void GenerateIslands()
     {
+        int numIslands = Random.Range(0, maxNumIslands+1);
+        
         for (int i = 0; i < numIslands; i++)
         {
             float radians = 2 * Mathf.PI / numIslands * i;
 
             Vector3 direction = new Vector3(Mathf.Sin(radians), 0, Mathf.Cos(radians));
 
-            Vector3 positionVector = gameObject.transform.position + direction * Random.Range(minRadius, maxRadius);
+            Vector3 position = gameObject.transform.position + direction * Random.Range(minRadius, maxRadius);
 
-            GameObject island = Instantiate(_factory.RandomIsland(), positionVector, Quaternion.identity);
+            Instantiate(_islandFactory.RandomIsland(), position, Quaternion.identity);
+        }
+    }
 
-            //_islands.Add(island);
+    private void GenerateEntities()
+    {
+        int numEntities = Random.Range(0, maxNumEntities + 1); 
+        
+        for (int i = 0; i < numEntities; i++)
+        {
+            Vector3 position = Random.insideUnitCircle * Random.Range(0, spawnRadius);
+
+            Instantiate(_entityFactory.RandomEntity(), position, Quaternion.identity);
         }
     }
 }
