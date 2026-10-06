@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0094b01e4d917574e9f72b4df0ec7e22, type: 3}
   m_Name: FortTrade_CannonballsForGold
   m_EditorClassIdentifier: Assembly-CSharp::Transaction
-  sellType: 0
-  sellAmount: 0
+  sellType: 3
+  sellAmount: 16
   buyType: 0
-  buyAmount: 0
+  buyAmount: 50

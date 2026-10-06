@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: VillageTrade_GoldForRepair
   m_EditorClassIdentifier: Assembly-CSharp::Transaction
   sellType: 0
-  sellAmount: 0
-  buyType: 0
-  buyAmount: 0
+  sellAmount: 50
+  buyType: 2
+  buyAmount: 25

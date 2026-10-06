@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class TransactionHandler : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    private PlayerInventory _playerInventory;
 
-    // Update is called once per frame
-    void Update()
+    public bool DoTransaction(Transaction t)
     {
-        
+        return false;
     }
+    
+    
 }

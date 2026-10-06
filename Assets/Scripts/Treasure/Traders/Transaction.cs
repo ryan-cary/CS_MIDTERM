@@ -11,8 +11,16 @@ public class Transaction : ScriptableObject
     [SerializeField] private LootType buyType;
     [SerializeField] private int buyAmount;
 
+    public LootType SellType => sellType;
+    public int SellAmount => sellAmount;
+
+    public LootType BuyType => buyType;
+    public int BuyAmount => buyAmount;
+
     public string GetTransactionText()
     {
         return $"Trade {sellAmount} {sellType.ToString()} for {buyAmount} {buyType.ToString()}";
     }
+    
+    
 }
