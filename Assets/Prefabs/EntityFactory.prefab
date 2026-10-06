@@ -44,4 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d1930e153634a4e8b998174129c11c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntityFactory
-  entityPrefabs: []
+  entityPrefabs:
+  - {fileID: 7800610478523973823, guid: d245dad8e1c232c4ba54231d780584db, type: 3}
+  - {fileID: 5934421794669136564, guid: 9fcfbc40fb0b8d7479356f48e63d1ef7, type: 3}
