@@ -1,16 +1,39 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class OverworldTile : MonoBehaviour
 {
-    [SerializeField] private Island island;
-    [SerializeField] private float width = 50f; //width of one side in m
+    [SerializeField] private int maxNumIslands = 5;
+    [SerializeField] private float minRadius = 200;
+    [SerializeField] private float maxRadius = 600;
     
-    private Transform _islandPosition; //transform relative to origin of tile to place island
+    private IslandFactory _factory;
+
+    //private List<GameObject> _islands;
+
+    //public List<GameObject> IslandList => _islands;
     
     void Start()
     {
-        //generate random transform within tile area
-        // --> padding for Island width to avoid overlap into other tiles
-        //position Island at transform
+        _factory = FindFirstObjectByType<IslandFactory>();
+        
+        int numIslands = Random.Range(0, maxNumIslands+1);
+        GenerateIslands(numIslands);
+    }
+
+    private void GenerateIslands(int numIslands)
+    {
+        for (int i = 0; i < numIslands; i++)
+        {
+            float radians = 2 * Mathf.PI / numIslands * i;
+
+            Vector3 direction = new Vector3(Mathf.Sin(radians), 0, Mathf.Cos(radians));
+
+            Vector3 positionVector = gameObject.transform.position + direction * Random.Range(minRadius, maxRadius);
+
+            GameObject island = Instantiate(_factory.RandomIsland(), positionVector, Quaternion.identity);
+
+            //_islands.Add(island);
+        }
     }
 }

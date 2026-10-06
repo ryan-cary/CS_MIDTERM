@@ -1,33 +1,36 @@
 using UnityEngine;
 
-public class WorldMap : MonoBehaviour
+public class OverworldMap : MonoBehaviour
 {
-    [SerializeField] private int size = 9; //length in tiles of one side of world map
-
-    public int Size => size;
-
-    private OverworldTile[][] _tileMap;
+    [SerializeField] private int mapSize = 5;
+    [SerializeField] private GameObject tilePrefab;
+    [SerializeField] private float tileSize = 1250;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         GenerateMap();
     }
 
+    void Start()
+    {
+        MovePlayerToCenter();
+    }
+
     void GenerateMap()
     {
-        // ensure map has a center tile
-        if (size % 2 == 0)
-            size++;
-        
-        // populate map
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < mapSize; i++)
         {
-            _tileMap[i] = new OverworldTile[size];
-            for (int j = 0; j < size; j++)
+            for (int j = 0; j < mapSize; j++)
             {
-                _tileMap[i][j] = TileFactory.GenerateTile();
+                Vector3 position = new Vector3(tileSize * i, 0, tileSize * j);
+                Instantiate(tilePrefab, position, Quaternion.identity);
             }
         }
+    }
+
+    void MovePlayerToCenter()
+    {
+        float center = tileSize * (mapSize / 2);
+        GameManager.Instance.GetPlayer().Ship.transform.position = new Vector3(center, 0, center);
     }
 }
