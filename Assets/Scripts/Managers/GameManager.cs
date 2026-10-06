@@ -42,4 +42,9 @@ public class GameManager : Singleton<GameManager>
     {
         return _sceneLoader;
     }
+
+    public void SetPlayer(Player p)
+    {
+        this.player = p;
+    }
 }

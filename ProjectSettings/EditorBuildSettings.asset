@@ -27,8 +27,14 @@ EditorBuildSettings:
     path: Assets/Scenes/IslandScenes/ShipwreckScene.unity
     guid: 47ff5c30b6b377148802f2a549a4d573
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/GameOver-Destroyed.unity
+    guid: a8f215bfa35a3c04f990e2c3af04809f
+  - enabled: 1
+    path: Assets/Scenes/GameOver-Mutiny.unity
+    guid: b2b121eb5fd2abe43a03d16c4a558c81
+  - enabled: 1
+    path: Assets/Scenes/VictoryScreen.unity
+    guid: 56c37c999be391e42a1d9c3037cb3211
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

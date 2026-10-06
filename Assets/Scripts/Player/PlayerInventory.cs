@@ -6,6 +6,8 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private int _cannonballs;
     [SerializeField] private int _gold;
     [SerializeField] private int _grog;
+    
+    [SerializeField] private static int winAmount = 15000;
 
     public UnityEvent OnGoldUpdate;
     public UnityEvent OnGrogUpdate;
@@ -33,6 +35,7 @@ public class PlayerInventory : MonoBehaviour
     private void Start()
     {
         OnGrogUpdate.AddListener(CheckForMutiny);
+        OnGoldUpdate.AddListener(CheckForWin);
     }
     
     public void AddCannonballs(int value)
@@ -83,12 +86,18 @@ public class PlayerInventory : MonoBehaviour
     public void RemoveGrog(int value)
     {
         _grog -= value;
-        OnGrogUpdate?.Invoke();        
+        OnGrogUpdate?.Invoke();
     }
 
     private void CheckForMutiny()
     {
         if (_grog <= 0)
-            Debug.Log("You are out of grog! Your crew has mutinied!");
+            SceneLoader.Instance.Load("GameOver-Mutiny");
+    }
+
+    private void CheckForWin()
+    {
+        if (_gold >= winAmount)
+            SceneLoader.Instance.Load("VictoryScreen");
     }
 }

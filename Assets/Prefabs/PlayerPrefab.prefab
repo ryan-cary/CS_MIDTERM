@@ -45,11 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecbd772ebea7b914898f01a993a366b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  _inventory: {fileID: 8525677910079657498}
-  _ship: {fileID: 8886900855814098450, guid: dd56e302f79cecd4f832f9299922ab0a, type: 3}
-  OnHPUpdate:
-    m_PersistentCalls:
-      m_Calls: []
+  inventory: {fileID: 8525677910079657498}
+  ship: {fileID: 0}
+  grogConsumptionRate: 20
+  grogConsumptionAmount: 1
 --- !u!114 &8525677910079657498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +61,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8a500fdfee58f14189a72242cde1825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
+  _cannonballs: 24
+  _gold: 0
+  _grog: 100
   OnGoldUpdate:
     m_PersistentCalls:
       m_Calls: []
