@@ -1368,13 +1368,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'This is a demo version. There will be some systems and visuals that are
-    not fully implemented! I hope the spirit of the game is communicated effectively,
-    and please know that I do plan to continue development in the future.
+  m_text: 'This is a demo version. There will be bugs, incomplete systems, and placeholder
+    assets! I hope the spirit of things is apparent, and know that I plan to continue
+    development going forward.
 
 
-    Now
-    hurry! Your crew is probably already drinking away your plunder...'
+    Now hurry! Your crew is probably already drinking
+    away your plunder...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6ee82d62729eaff4694af2eb46be464d, type: 2}
   m_sharedMaterial: {fileID: -7950506450615613895, guid: 6ee82d62729eaff4694af2eb46be464d, type: 2}
