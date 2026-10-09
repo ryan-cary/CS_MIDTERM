@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class DebugMovementScheme : PlayerShipMovementScheme
+public class DebugMovementBehaviour : PlayerShipMovementBehaviour
 {
 
     [SerializeField] private ForceMode forceMode = ForceMode.VelocityChange;

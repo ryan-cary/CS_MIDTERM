@@ -90,6 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0d995b0d9b15039caad86d684de3ae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShip
+  _maxHitpoints: 100
+  _hitpoints: 100
   OnHPUpdate:
     m_PersistentCalls:
       m_Calls: []
@@ -101,7 +103,6 @@ MonoBehaviour:
   - {fileID: 4392255502807831087}
   - {fileID: 7930726450930250621}
   - {fileID: 4937864898587713394}
-  cannonsPerSide: 3
 --- !u!114 &8000359107224169715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +156,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282313698902747607}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7cdde0bd638599549ac38b217751e2d5, type: 3}
   m_Name: 
@@ -182,14 +183,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282313698902747607}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75988fe7ff5ed2b4da740e4b4a6ddfc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageBasedMovementScheme
-  movementSpeed: 25
-  shipSpeed: 20
+  movementSpeed: 15000
   speedStage: 0
+  _speedStageSlider: {fileID: 0}
 --- !u!136 &3316711360855749779
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -11,6 +11,9 @@ public class SceneLoader : Singleton<SceneLoader>
 
     public void LoadIsland(string scene, Transform respawn)
     {
+        GameManager.Instance.GetPlayer().Ship.GetComponent<SpeedStageMovementBehaviour>().ResetMovement();
+        //okay, yes, this is pretty suboptimal, but it works for now
+        
         AlignPlayerShipWithRespawn(respawn);
         SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
         StartCoroutine(ActivateScene(scene));

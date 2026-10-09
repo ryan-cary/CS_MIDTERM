@@ -69,4 +69,9 @@ public class PlayerInput : MonoBehaviour
             button.FireAction();
         }
     }
+
+    public void DebugMessage()
+    {
+        Debug.Log("This is a debug message!");
+    }
 }
