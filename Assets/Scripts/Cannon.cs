@@ -3,6 +3,7 @@ using UnityEngine;
 public class Cannon : MonoBehaviour
 {
     [SerializeField] private float projectileVelocity = 25.0f;
+    [SerializeField] private float lifetime = 5.0f;
     [SerializeField] private Transform barrel;
 
     [SerializeField] private ObjectPool cannonballs;
@@ -22,6 +23,7 @@ public class Cannon : MonoBehaviour
         pBody.rotation = barrel.rotation;
         
         pBody.AddForce(Vector3.forward * projectileVelocity, ForceMode.Impulse);
-
+        
+        cannonballs.RecyclePooledObject(projectile, lifetime);
     }
 }
