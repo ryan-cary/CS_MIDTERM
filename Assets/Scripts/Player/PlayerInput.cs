@@ -11,9 +11,7 @@ public class PlayerInputAxis
     private float value;
 
     public string GetName()
-    {
-        return axisName; 
-    }
+    {  return axisName; }
 
     public float GetValue()
     {
@@ -30,11 +28,8 @@ public class PlayerInputAxis
 [Serializable]
 public class PlayerInputButton
 {
-    [SerializeField]
-    private string buttonName;
-
-    [SerializeField]
-    private UnityEvent<bool> buttonAction;
+    [SerializeField] private string buttonName;
+    [SerializeField] private UnityEvent<bool> buttonAction;
 
     private bool value;
 
@@ -67,13 +62,11 @@ public class PlayerInput : MonoBehaviour
             axis.GetValue();
             axis.FireAction();
         }
-        
-        
+
         foreach (var button in inputButtons)
         {
             button.GetValue();
             button.FireAction();
         }
-        
     }
 }
