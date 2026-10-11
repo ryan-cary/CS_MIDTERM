@@ -20,13 +20,13 @@ public class CannonInput : MonoBehaviour
 
     private void GetPortCannonInput()
     {
-        _portCannonInput = Input.GetMouseButton(0);
+        _portCannonInput = Input.GetKeyDown(KeyCode.Q);
         _ship.SetPortFireInput(_portCannonInput);
     }
     
     private void GetStarboardCannonInput()
     {
-        _starboardCannonInput = Input.GetMouseButton(1);
+        _starboardCannonInput = Input.GetKeyDown(KeyCode.E);
         _ship.SetStarboardFireInput(_starboardCannonInput);
     }
 }

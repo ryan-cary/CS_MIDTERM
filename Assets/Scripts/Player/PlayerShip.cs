@@ -40,9 +40,13 @@ public class PlayerShip : MonoBehaviour
     [Header("Cannons")]
     [SerializeField] private Cannon[] _portCannonArray;
     [SerializeField] private Cannon[] _starboardCannonArray;
-
+    [SerializeField] private float reloadTimer = 3.0f;
+    
     private bool _portFireInput = false;
     private bool _starboardFireInput = false;
+    private float _portCannonReload = 0;
+    private float _starboardCannonReload = 0;
+    
     
     /*
      [SerializeField] private int cannonsPerSide= 1;
@@ -67,22 +71,28 @@ public class PlayerShip : MonoBehaviour
 
     private void Update()
     {
-        if(_portFireInput)
+        Reload();
+            
+        if (_portFireInput && _portCannonReload <= 0)
             FirePortCannons();
-        if(_starboardFireInput)
+        if(_starboardFireInput && _starboardCannonReload <= 0)
             FireStarboardCannons();
     }
 
     private void FirePortCannons()
     {
+        Debug.Log("Attempting to fire port cannons");
         foreach (Cannon cannon in _portCannonArray)
             cannon.Fire();
+        _portCannonReload = reloadTimer;
     }
     
     private void FireStarboardCannons()
     {
+        Debug.Log("Attempting to fire starboard cannons");
         foreach (Cannon cannon in _starboardCannonArray)
             cannon.Fire();
+        _starboardCannonReload = reloadTimer;
     }
 
     public void SetPortFireInput(bool value)
@@ -93,6 +103,15 @@ public class PlayerShip : MonoBehaviour
     public void SetStarboardFireInput(bool value)
     {
         _starboardFireInput = value;
+    }
+
+    private void Reload()
+    {
+        if (_portCannonReload > 0)
+            _portCannonReload -= Time.deltaTime;
+        
+        if (_starboardCannonReload > 0)
+            _starboardCannonReload -= Time.deltaTime;
     }
 
     #endregion

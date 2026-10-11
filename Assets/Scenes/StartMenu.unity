@@ -1048,10 +1048,9 @@ MonoBehaviour:
     - Turn to Starboard
 
 
-    Left Click - Fire Cannons to Port
+    Q - Fire Cannons to Port
 
-    Right Click
-    - Fire Cannons to Starboard
+    E - Fire Cannons to Starboard
 
 '
   m_isRightToLeft: 0

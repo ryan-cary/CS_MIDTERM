@@ -13,8 +13,11 @@ public class Cannon : MonoBehaviour
         PooledObject projectile = cannonballs.GetPooledObject();
 
         if (projectile == null)
+        {
+            Debug.Log("No projectile available...");
             return;
-        
+        }
+            
         projectile.gameObject.SetActive(true);
 
         Rigidbody pBody = projectile.GetComponent<Rigidbody>();
@@ -23,6 +26,8 @@ public class Cannon : MonoBehaviour
         pBody.rotation = barrel.rotation;
         
         pBody.AddForce(Vector3.forward * projectileVelocity, ForceMode.Impulse);
+
+        Debug.Log("Firing!");
         
         cannonballs.RecyclePooledObject(projectile, lifetime);
     }
