@@ -2,6 +2,11 @@ using UnityEngine;
 
 public interface IGrappler
 {
-    public void Attach();
-    public void Detach();
+    public bool IsAttached { get; }
+
+    public void Attach()
+    { }
+
+    public void Detach()
+    { }
 }

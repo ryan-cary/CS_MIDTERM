@@ -8,14 +8,16 @@ public class LeviathanEntity : OverworldEntity, IGrappler
     {
         base.Update();
     }
-    
+
+    public bool IsAttached { get; set; }
+
     public void Attach()
     {
-        throw new System.NotImplementedException();
+        IsAttached = true;
     }
 
     public void Detach()
     {
-        throw new System.NotImplementedException();
+        IsAttached = false;
     }
 }

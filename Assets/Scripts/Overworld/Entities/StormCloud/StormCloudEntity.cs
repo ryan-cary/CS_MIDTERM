@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class StormCloudEntity : OverworldEntity, IGrappler
+public class StormCloudEntity : OverworldEntity
 {
     [SerializeField] private GameObject mainBolt;
     [SerializeField] private GameObject[] feelerBolts;
@@ -14,15 +14,5 @@ public class StormCloudEntity : OverworldEntity, IGrappler
         mainBolt.gameObject.SetActive(false);
         foreach(GameObject bolt in feelerBolts)
             bolt.gameObject.SetActive(true);
-    }
-    
-    public void Attach()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void Detach()
-    {
-        throw new System.NotImplementedException();
     }
 }

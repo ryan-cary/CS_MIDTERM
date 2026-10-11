@@ -1,12 +1,22 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class OverworldEntity : MonoBehaviour, IDamageable
 {
-    private EntityState _currentState;
+    #region Action
 
     [SerializeField] private EntityAction action;
 
+    public EntityAction Action => action;
+
+    #endregion
+
+    #region StateMachine
+
+    private EntityState _currentState;
+
+    [Header("Navigation")]
     public Transform entityEye;
     public float sightRadius;
     public float sightDistance;
@@ -31,13 +41,12 @@ public class OverworldEntity : MonoBehaviour, IDamageable
         _currentState.OnStateEnter();
     }
 
-    protected virtual void Death()
-    {
-        Destroy(gameObject);
-    }
+    #endregion
 
     public virtual void TakeDamage(float damage)
     {
-        Death();
+        // This is just a placeholder since I haven't implemented entity health / a real combat system yet
+        ChangeState(new EntityDeathState(this));
     }
+    
 }
