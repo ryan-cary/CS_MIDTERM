@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public abstract class PlayerShipMovementScheme : MonoBehaviour
+public abstract class PlayerShipMovementBehaviour : MonoBehaviour
 {
     //public UnityEvent<float> BroadcastSpeed;
     
-    [SerializeField] private float movementSpeed;
+    [SerializeField] protected float movementSpeed;
     
     private float horizontalInput;
     private float verticalInput;

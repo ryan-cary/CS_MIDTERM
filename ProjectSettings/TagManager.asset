@@ -8,11 +8,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - OverworldEntity
+  - Player
   - Water
   - UI
-  - 
-  - 
+  - Cannonball
+  - OverworldEntity
   - 
   - 
   - 

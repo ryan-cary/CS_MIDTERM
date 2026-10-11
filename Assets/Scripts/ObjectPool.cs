@@ -4,28 +4,35 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour
 {
     public PooledObject _objectToPool;
-    public int _startSize;
-    public int _poolLimit = 64;
+    private int _poolLimit;
 
-    [SerializeField] private List<PooledObject> pooledObjects = new List<PooledObject>();
-    [SerializeField] private List<PooledObject> usedObjects = new List<PooledObject>();
+    [SerializeField] private int _startSize = 128;
+    [SerializeField] private List<PooledObject> pooledObjects;
+    [SerializeField] private List<PooledObject> usedObjects;
 
     private PooledObject _temp;
 
-    void Start()
+    void Awake()
     {
         Initialize();
     }
 
     void Initialize()
     {
-        for(int i = 0; i < _startSize; ++i)
+        _poolLimit = _startSize;
+        
+        pooledObjects = new List<PooledObject>();
+        
+        if (usedObjects.Count > 0)
+            usedObjects = new List<PooledObject>();
+        
+        for(int i = 0; i < _startSize; i++)
         {
             AddNewObject();
         }
     }
 
-    void AddNewObject()
+    private void AddNewObject()
     {
         _temp = Instantiate(_objectToPool, transform).GetComponent<PooledObject>();
         _temp.gameObject.SetActive(false);
