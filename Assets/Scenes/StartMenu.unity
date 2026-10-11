@@ -1038,23 +1038,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'W - Speed Up
+  m_text: 'Speed is controlled in stages (Full - Half - Stationary - Reverse). Use
+    the slider on the right of the screen to change stages.
 
-    S - Slow Down
 
     A - Turn to Port
 
-    D - Turn to
-    Starboard
+    D
+    - Turn to Starboard
 
 
-    Speed is controlled in stages (Full - Half - Stationary - Reverse)
+    Q - Fire Cannons to Port
 
-
-    Left
-    Click - Fire Cannons to Port
-
-    Right Click - Fire Cannons to Starboard
+    E - Fire Cannons to Starboard
 
 '
   m_isRightToLeft: 0
