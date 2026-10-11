@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3763384614564568578}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,8 @@ GameObject:
   - component: {fileID: 521106089994238359}
   - component: {fileID: 1716830364674888118}
   - component: {fileID: 8550403527067053597}
-  m_Layer: 3
+  - component: {fileID: 8397198379915950786}
+  m_Layer: 7
   m_Name: Kraken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,6 +121,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ceeac5db1d843449b1c349848df0afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LeviathanAction
+--- !u!135 &8397198379915950786
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7800610478523973823}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 12.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &8346225312151745427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -174,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5276604079657248588, guid: c715a1a510e12d24c8f41b721976be93, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3267557782872681232, guid: c715a1a510e12d24c8f41b721976be93, type: 3}

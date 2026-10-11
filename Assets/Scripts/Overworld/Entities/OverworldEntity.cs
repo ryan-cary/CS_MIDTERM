@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class OverworldEntity : MonoBehaviour
+public class OverworldEntity : MonoBehaviour, IDamageable
 {
     private EntityState _currentState;
 
@@ -29,5 +29,15 @@ public class OverworldEntity : MonoBehaviour
         _currentState.OnStateExit();
         _currentState = state;
         _currentState.OnStateEnter();
+    }
+
+    protected virtual void Death()
+    {
+        Destroy(gameObject);
+    }
+
+    public virtual void TakeDamage(float damage)
+    {
+        Death();
     }
 }
