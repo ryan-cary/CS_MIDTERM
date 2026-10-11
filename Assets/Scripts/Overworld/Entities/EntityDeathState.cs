@@ -13,8 +13,6 @@ public class EntityDeathState : EntityState
     public override void OnStateEnter()
     {
         MakeIntangible();
-        
-        Debug.Log("Here's where I would start a death animation... if I had one!");
         _entity.StartCoroutine(DEBUG_DeathCoroutine());
     }
 

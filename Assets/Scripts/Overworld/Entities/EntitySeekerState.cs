@@ -9,7 +9,7 @@ public class EntitySeekerState : EntityState
 
 
     public override void OnStateEnter()
-    { Debug.Log("Entity entered seeking state!"); }
+    { }
 
     public override void OnStateUpdate()
     {

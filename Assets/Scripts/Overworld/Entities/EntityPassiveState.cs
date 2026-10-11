@@ -13,9 +13,7 @@ public class EntityPassiveState : EntityState
 
 
     public override void OnStateEnter()
-    {
-        Debug.Log($"Entity entered passive state");
-    }
+    { }
 
     public override void OnStateUpdate()
     {
