@@ -81,7 +81,6 @@ public class PlayerShip : MonoBehaviour
 
     private void FirePortCannons()
     {
-        Debug.Log("Attempting to fire port cannons");
         foreach (Cannon cannon in _portCannonArray)
             cannon.Fire();
         _portCannonReload = reloadTimer;
@@ -89,7 +88,6 @@ public class PlayerShip : MonoBehaviour
     
     private void FireStarboardCannons()
     {
-        Debug.Log("Attempting to fire starboard cannons");
         foreach (Cannon cannon in _starboardCannonArray)
             cannon.Fire();
         _starboardCannonReload = reloadTimer;

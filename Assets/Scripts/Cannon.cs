@@ -1,23 +1,34 @@
+using System;
 using UnityEngine;
 
 public class Cannon : MonoBehaviour
 {
-    [SerializeField] private float projectileVelocity = 25.0f;
-    [SerializeField] private float lifetime = 5.0f;
     [SerializeField] private Transform barrel;
-
     [SerializeField] private ObjectPool cannonballs;
     
+    [Header("Projectiles")]
+    [SerializeField] private float projectileVelocity = 50.0f;
+    [SerializeField] private float lifetime = 5.0f;
+    [SerializeField] private Vector3 firingAngle = new Vector3(0, 0.15f, 0);
+
+    private AudioSource _audio;
+
+    private void Awake()
+    {
+        _audio = GetComponent<AudioSource>();
+    }
+
     public void Fire()
     {
         PooledObject projectile = cannonballs.GetPooledObject();
 
         if (projectile == null)
         {
-            Debug.Log("No projectile available...");
             return;
         }
-            
+        
+        _audio.Play();
+        
         projectile.gameObject.SetActive(true);
 
         Rigidbody pBody = projectile.GetComponent<Rigidbody>();
@@ -25,9 +36,7 @@ public class Cannon : MonoBehaviour
         pBody.position = barrel.position;
         pBody.rotation = barrel.rotation;
         
-        pBody.AddForce(Vector3.forward * projectileVelocity, ForceMode.Impulse);
-
-        Debug.Log("Firing!");
+        pBody.AddForce(transform.rotation * (Vector3.forward + firingAngle) * projectileVelocity, ForceMode.Impulse);
         
         cannonballs.RecyclePooledObject(projectile, lifetime);
     }
