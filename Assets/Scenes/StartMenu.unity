@@ -1048,9 +1048,9 @@ MonoBehaviour:
     - Turn to Starboard
 
 
-    Q - Fire Cannons to Port
+    Q - Fire Port Cannons
 
-    E - Fire Cannons to Starboard
+    E - Fire Starboard Cannons
 
 '
   m_isRightToLeft: 0
