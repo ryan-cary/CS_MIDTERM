@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
         while (Inventory.Grog > 0)
         {
             yield return new WaitForSeconds(grogConsumptionRate);
-            Inventory.RemoveGrog(1);
+            Inventory.RemoveGrog(grogConsumptionAmount);
         }
     }
 }
