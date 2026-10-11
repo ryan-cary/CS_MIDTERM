@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8626381561638926955}
   - component: {fileID: 8718972936209184886}
   - component: {fileID: 1624965324838854691}
+  - component: {fileID: 7485683460526358332}
   m_Layer: 7
   m_Name: StormCloud
   m_TagString: Untagged
@@ -72,10 +73,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08b3f5e36cb0038e490b929aebab0303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StormCloudEntity
-  action: {fileID: 8718972936209184886}
+  action: {fileID: 7485683460526358332}
   entityEye: {fileID: 7807702997851332799}
-  sightRadius: 30
-  sightDistance: 200
+  sightRadius: 50
+  sightDistance: 250
   agent: {fileID: 1788637074489066165}
   player: {fileID: 0}
   mainBolt: {fileID: 3314892735977176888}
@@ -122,6 +123,20 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7485683460526358332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5934421794669136564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a60cec0ba1a3f7419185c3d0a4bab3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DEBUG_Action_DamagePlayer
+  damage: 10
+  cooldown: 5
 --- !u!1 &8494531400021759471
 GameObject:
   m_ObjectHideFlags: 0

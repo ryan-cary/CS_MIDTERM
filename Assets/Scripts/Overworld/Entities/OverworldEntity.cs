@@ -39,6 +39,7 @@ public class OverworldEntity : MonoBehaviour, IDamageable
         _currentState.OnStateExit();
         _currentState = state;
         _currentState.OnStateEnter();
+        Debug.Log($"Entity {name} changed to {state} state");
     }
 
     #endregion

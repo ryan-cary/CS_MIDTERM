@@ -2,9 +2,15 @@ using UnityEngine;
 
 public abstract class EntityAction : MonoBehaviour
 {
-    public float damage;
-    public float cooldown;
+    protected OverworldEntity _entity;
+    
     private float _timer;
+
+    private void Start()
+    {
+        _entity = GetComponentInParent<OverworldEntity>();
+    }
+    
     public abstract void Execute();
 
     public bool IsOnCooldown()
@@ -17,5 +23,10 @@ public abstract class EntityAction : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void StartCooldown(float cooldown)
+    {
+        _timer = cooldown;
     }
 }

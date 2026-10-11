@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class EntityGrapplingState : EntityActionState
+public class EntityGrapplingState : EntityState
 {
     private IGrappler _grappler;
+    private float _distanceToPlayer;
     
     public EntityGrapplingState(OverworldEntity entity) : base(entity)
     { }
@@ -15,6 +16,9 @@ public class EntityGrapplingState : EntityActionState
 
     public override void OnStateUpdate()
     {
+        if (_entity.player != null)
+            _distanceToPlayer = Vector3.Distance(_entity.transform.position, _entity.player.position);
+        
         // if somehow the grappler gets moved too far from the player, transition back to seeking
         if (ShouldTransitionToSeekerState())
             _entity.ChangeState(new EntitySeekerState(_entity));
@@ -26,5 +30,10 @@ public class EntityGrapplingState : EntityActionState
     public override void OnStateExit()
     {
         _grappler.Detach();
+    }
+    
+    protected bool ShouldTransitionToSeekerState()
+    {
+        return _distanceToPlayer > 10;
     }
 }

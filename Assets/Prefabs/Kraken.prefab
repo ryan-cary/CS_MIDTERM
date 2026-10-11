@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1716830364674888118}
   - component: {fileID: 8550403527067053597}
   - component: {fileID: 8397198379915950786}
+  - component: {fileID: 1575223494879598153}
   m_Layer: 7
   m_Name: Kraken
   m_TagString: Untagged
@@ -102,10 +103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a657f8e1782c740c953c4a7282c0414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LeviathanEntity
-  action: {fileID: 8550403527067053597}
+  action: {fileID: 1575223494879598153}
   entityEye: {fileID: 3763384614564568578}
-  sightRadius: 15
-  sightDistance: 150
+  sightRadius: 30
+  sightDistance: 250
   agent: {fileID: 521106089994238359}
   player: {fileID: 0}
   grappleOffset: {x: 0, y: 0, z: 0}
@@ -142,6 +143,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 12.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1575223494879598153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7800610478523973823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a60cec0ba1a3f7419185c3d0a4bab3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DEBUG_Action_DamagePlayer
+  damage: 10
+  cooldown: 5
 --- !u!1001 &8346225312151745427
 PrefabInstance:
   m_ObjectHideFlags: 0

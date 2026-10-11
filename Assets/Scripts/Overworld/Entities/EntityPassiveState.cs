@@ -61,12 +61,8 @@ public class EntityPassiveState : EntityState
     }
     
     /// <summary>
-    /// Finds a random position on the NavMesh within a derived sphere 
+    /// Finds a random point on the navmesh within a specified distance
     /// </summary>
-    /// <param name="origin">Centerpoint of derived sphere</param>
-    /// <param name="distance">Maximum distance at which to generate the location</param>
-    /// <param name="layermask">For use with NavMesh.SamplePosition</param>
-    /// <returns>Transform vector of resultant position</returns>
     private Vector3 RandomNavSphere(Vector3 origin, float distance, int layermask) 
     {
         Vector3 direction = Random.insideUnitSphere * distance + origin;
