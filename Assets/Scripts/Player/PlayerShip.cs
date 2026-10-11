@@ -1,8 +1,7 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerShip : MonoBehaviour
+public class PlayerShip : MonoBehaviour, IDamageable
 {
     #region Hitpoints
 

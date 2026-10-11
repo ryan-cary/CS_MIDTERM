@@ -20,12 +20,17 @@ public class Cannon : MonoBehaviour
 
     public void Fire()
     {
+        if (GameManager.Instance.GetPlayer().Inventory.Cannonballs <= 0)
+            return;
+        
         PooledObject projectile = cannonballs.GetPooledObject();
 
         if (projectile == null)
         {
             return;
         }
+        
+        GameManager.Instance.GetPlayer().Inventory.RemoveCannonballs(1);
         
         _audio.Play();
         

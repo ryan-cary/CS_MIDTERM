@@ -49,7 +49,7 @@ public class OverworldTile : MonoBehaviour
         
         for (int i = 0; i < numEntities; i++)
         {
-            Vector3 position = Random.insideUnitCircle * Random.Range(0, spawnRadius);
+            Vector3 position = new Vector3(Random.Range(0, spawnRadius), 0, Random.Range(0, spawnRadius)) + gameObject.transform.position;
 
             Instantiate(_entityFactory.RandomEntity(), position, Quaternion.identity);
         }
