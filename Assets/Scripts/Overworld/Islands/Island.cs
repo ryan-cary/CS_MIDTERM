@@ -13,7 +13,6 @@ public class Island : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameManager.Instance.GetPlayer().Ship.GetComponent<SpeedStageMovementBehaviour>().resetMovement?.Invoke();
             GameManager.Instance.GetSceneLoader().LoadIsland(data.SceneToLoad, respawn);
         }
     }

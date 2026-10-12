@@ -17,8 +17,7 @@ public class SpeedSlider : MonoBehaviour
 
     public void UpdateSpeedStage()
     {
-        Debug.Log("foo");
-        //_speedController.SetSpeedStage((int)_slider.value);
+        _speedController.SetSpeedStage((int)_slider.value);
     }
 
     private void Reset()
