@@ -531,7 +531,6 @@ GameObject:
   - component: {fileID: 59450940382865557}
   - component: {fileID: 3283536355274582153}
   - component: {fileID: 1603350221349039381}
-  - component: {fileID: 3210403053743729961}
   m_Layer: 5
   m_Name: DebugPanel
   m_TagString: Untagged
@@ -625,28 +624,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &3210403053743729961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246208376309464928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd6e76041b73464ba4cd87419c885b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  hpText: {fileID: 6252340898948339833}
-  goldText: {fileID: 8667729486234529999}
-  grogText: {fileID: 1951609478578810856}
-  cannonballText: {fileID: 6947070911767126024}
-  entityCountText: {fileID: 6358003336479772141}
-  islandCountText: {fileID: 6767390503561582031}
-  mapSizeText: {fileID: 2401158444533776859}
-  speedText: {fileID: 6448987508958739597}
-  stageText: {fileID: 715683899392640441}
-  runtimeText: {fileID: 5438494288227394742}
 --- !u!1 &1275677519753644324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,6 +1059,7 @@ GameObject:
   - component: {fileID: 5868152060765840518}
   - component: {fileID: 3993076728756182432}
   - component: {fileID: 8282274429602022589}
+  - component: {fileID: 7195239576167427886}
   m_Layer: 5
   m_Name: UI-Canvas
   m_TagString: Untagged
@@ -1191,6 +1169,29 @@ MonoBehaviour:
   _goldText: {fileID: 7432872264688410699}
   _grogText: {fileID: 5531706405611327920}
   _cannonballsText: {fileID: 7765400437919494160}
+--- !u!114 &7195239576167427886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114386744708204047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd6e76041b73464ba4cd87419c885b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  debugPanel: {fileID: 1246208376309464928}
+  hpText: {fileID: 6252340898948339833}
+  goldText: {fileID: 8667729486234529999}
+  grogText: {fileID: 1951609478578810856}
+  cannonballText: {fileID: 6947070911767126024}
+  entityCountText: {fileID: 6358003336479772141}
+  islandCountText: {fileID: 6767390503561582031}
+  mapSizeText: {fileID: 2401158444533776859}
+  speedText: {fileID: 6448987508958739597}
+  stageText: {fileID: 715683899392640441}
+  runtimeText: {fileID: 5438494288227394742}
 --- !u!1 &2696066676461448530
 GameObject:
   m_ObjectHideFlags: 0

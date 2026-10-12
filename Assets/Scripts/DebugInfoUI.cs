@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class DebugInfoUI : MonoBehaviour
 {
+    [SerializeField] private GameObject debugPanel;
+    
     [Header("Player Info")] 
-    //[SerializeField] private TMP_Text[] playerInfo;
     [SerializeField] private TMP_Text hpText;
     [SerializeField] private TMP_Text goldText;
     [SerializeField] private TMP_Text grogText;
@@ -37,12 +38,12 @@ public class DebugInfoUI : MonoBehaviour
     {
         if (isActive)
         {
-            gameObject.SetActive(false);
+            debugPanel.SetActive(false);
             isActive = false;
         }
         else
         {
-            gameObject.SetActive(true);
+            debugPanel.SetActive(true);
             isActive = true;
         }
     }
