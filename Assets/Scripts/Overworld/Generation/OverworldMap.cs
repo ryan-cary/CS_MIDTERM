@@ -5,6 +5,8 @@ public class OverworldMap : MonoBehaviour
     [SerializeField] private int mapSize = 5;
     [SerializeField] private GameObject tilePrefab;
     [SerializeField] private float tileSize = 1250;
+
+    public int Size => mapSize;
     
     void Awake()
     {

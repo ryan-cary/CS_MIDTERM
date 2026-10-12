@@ -1,17 +1,19 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class SpeedStageMovementBehaviour : PlayerShipMovementBehaviour
 {
     [SerializeField][Range(-1,2)] private int speedStage;
-    
-    [SerializeField] private Slider _speedStageSlider;
     private Rigidbody _rigidbody;
+
+    public UnityEvent resetMovement;
+
+    public int Stage => speedStage;
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _speedStageSlider = FindFirstObjectByType<Slider>();
+        resetMovement.AddListener(Reset);
     }
     
     protected void Update()
@@ -19,10 +21,9 @@ public class SpeedStageMovementBehaviour : PlayerShipMovementBehaviour
         base.Update();
     }
 
-    public void SetSpeedStage()
+    public void SetSpeedStage(int stage)
     {
-        int _temp = speedStage;
-        speedStage = (int)_speedStageSlider.value;
+        speedStage = stage;
     }
 
     private Vector3 CalculateCourseVector()
@@ -42,10 +43,9 @@ public class SpeedStageMovementBehaviour : PlayerShipMovementBehaviour
         
     }
 
-    public void ResetMovement()
+    private void Reset()
     {
         speedStage = 0;
-        _speedStageSlider.value = 0f;
-        
     }
+
 }

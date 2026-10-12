@@ -8,7 +8,6 @@ public class Island : MonoBehaviour
     [SerializeField] private Transform respawn; 
 
     private bool _isCompleted;
-    //[SerializeField] private string _ambientSound;
 
     private void OnTriggerEnter(Collider other)
     {
