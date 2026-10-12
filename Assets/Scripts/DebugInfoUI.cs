@@ -27,7 +27,7 @@ public class DebugInfoUI : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tilde))
+        if (Input.GetKeyDown(KeyCode.BackQuote))
             Toggle();
         
         UpdatePlayerInfo();
