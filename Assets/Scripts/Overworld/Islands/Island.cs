@@ -8,12 +8,12 @@ public class Island : MonoBehaviour
     [SerializeField] private Transform respawn; 
 
     private bool _isCompleted;
-    //[SerializeField] private string _ambientSound;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            GameManager.Instance.GetPlayer().Ship.GetComponent<SpeedStageMovementBehaviour>().resetMovement?.Invoke();
             GameManager.Instance.GetSceneLoader().LoadIsland(data.SceneToLoad, respawn);
         }
     }
