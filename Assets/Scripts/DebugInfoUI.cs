@@ -21,12 +21,13 @@ public class DebugInfoUI : MonoBehaviour
     [SerializeField] private TMP_Text speedText;
     [SerializeField] private TMP_Text stageText;
     [SerializeField] private TMP_Text runtimeText;
+    [SerializeField] private TMP_Text fpsText;
 
     private bool isActive = false;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Tilde))
             Toggle();
         
         UpdatePlayerInfo();
@@ -61,7 +62,8 @@ public class DebugInfoUI : MonoBehaviour
     {
         entityCountText.text = $"Entities in world: {FindObjectsByType<OverworldEntity>(FindObjectsSortMode.None).Length}";
         islandCountText.text = $"Islands in world: {FindObjectsByType<Island>(FindObjectsSortMode.None).Length}";
-        mapSizeText.text = $"Map size: {FindFirstObjectByType<OverworldMap>().Size}";
+        int size = FindFirstObjectByType<OverworldMap>().Size;
+        mapSizeText.text = $"Map size: {size}x{size} ({size^2} tiles)";
     }
 
     private void UpdateSystemInfo()
@@ -70,5 +72,6 @@ public class DebugInfoUI : MonoBehaviour
         speedText.text = $"Ship Speed: {ps.gameObject.GetComponent<Rigidbody>().linearVelocity}";
         stageText.text = $"Speed Stage: {ps.GetComponent<SpeedStageMovementBehaviour>().Stage}";
         runtimeText.text = $"Runtime: {Time.time.ToString("0.00")}";
+        fpsText.text = $"FPS: {1.0f / Time.smoothDeltaTime}";
     }
 }
